@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<mavlink>
+    <include>common.xml</include>
+    <!-- NOTE: If the included file already contains a version tag, remove the version tag here, else uncomment to enable. -->
+	<!--<version>3</version>-->
+	<enums>
+	</enums>
+	<messages>
+		<message id="150" name="POLY_COEFS">
+			<description>This message encodes the coefficients and length of time for a polynomial.</description>
+			<field type="float" name="del_t">The length of time polynomial is valid.</field>
+			<field type="float" name="p_0">Zero order coefficient.</field>
+			<field type="float" name="p_1">First order coefficient.</field>
+			<field type="float" name="p_2">Second order coefficient.</field>
+			<field type="float" name="p_3">Third order coefficient.</field>
+			<field type="float" name="p_4">Fourth order coefficient.</field>
+			<field type="float" name="p_5">Fifth order coefficient.</field>
+			<field type="float" name="p_6">Sixth order coefficient.</field>
+			<field type="float" name="p_7">Seventh order coefficient.</field>
+			<field type="float" name="p_8">Eigth order coefficient.</field>
+			<field type="float" name="p_9">Ninth order coefficient.</field>
+		</message>
+		<message id="151" name="TRAJ_SEG">
+			<description>This message encodes the coefficients and timing of a 4D spline segment (x,y,z,yaw).</description>
+			<field type="uint8_t" name="nSeg">Total number of segments in trajectory.</field>
+			<field type="uint8_t" name="curSeg">Current segment in trajectory.</field>
+			<field type="float" name="Tdel">The length of time segment is valid.</field>
+			<field type="float[10]" name="xCoefs">Coefficients for x-polynomial.</field>
+			<field type="float[10]" name="yCoefs">Coefficients for y-polynomial.</field>
+			<field type="float[10]" name="zCoefs">Coefficients for z-polynomial.</field>
+			<field type="float[10]" name="yawCoefs">Coefficients for yaw-polynomial.</field>
+		</message>
+	</messages>
+</mavlink>
