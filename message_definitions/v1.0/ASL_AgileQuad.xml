@@ -32,6 +32,7 @@
 		</message>
 		<message id="152" name="OBS_REPEL_FORCE_NED">
             <description>This message encodes a repulsive force, in global north-east-down coords, due to proximity and relative velocity of obsacltes.</description>
+            <field type="uint64_t" name="usec">Timestamp from Wifi Comm in microseconds</field>
             <field type="float" name="Fx">Repulsive is global x-direction.</field>
             <field type="float" name="Fy">Repulsive is global y-direction.</field>
             <field type="float" name="Fz">Repulsive is global z-direction.</field>
